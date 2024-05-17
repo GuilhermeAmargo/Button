@@ -17,6 +17,7 @@ public class JavaFXMain extends Application{
     public void start(Stage primaryStage){
         Button btn = new Button("Test");
         Text text = new Text("Hello World!");
+        text.setVisible(false);
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
