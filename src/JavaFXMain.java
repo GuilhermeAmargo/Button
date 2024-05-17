@@ -18,16 +18,19 @@ public class JavaFXMain extends Application{
         Button btn = new Button("Test");
         Text text = new Text("Hello World!");
         btn.setOnAction(new EventHandler<ActionEvent>() {
-
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                if(text.isVisible()){
+                    text.setVisible(false);
+                } else {
+                    text.setVisible(true);
+                }
             }
         });
 
         HBox root = new HBox();
         root.getChildren().add(btn);
-
+        root.getChildren().add(text);
         Scene scene = new Scene(root,500,500);
 
         primaryStage.setScene(scene);
