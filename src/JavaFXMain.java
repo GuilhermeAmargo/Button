@@ -7,7 +7,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
 public class JavaFXMain extends Application{
     public static void main(String[] args) {
         launch(args);
@@ -21,6 +20,8 @@ public class JavaFXMain extends Application{
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                // de forma mais simples
+                // text.setVisible(!text.isVisible());
                 if(text.isVisible()){
                     text.setVisible(false);
                 } else {
